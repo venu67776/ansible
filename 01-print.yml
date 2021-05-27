@@ -1,6 +1,6 @@
 - name: Demo on print
   hosts: all
   tasks:
-    -name: Print HELLO WORLD
-     debug:
-       msg: HElloWorld ***/***
+    - name: Print HELLO WORLD
+      debug:
+        msg: HElloWorld ***/***
