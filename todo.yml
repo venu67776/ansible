@@ -1,0 +1,24 @@
+- name: Setup todo project
+  hosts: all
+  become: yes
+  ## THis become can also be used at task level
+  roles:
+    - role: frontend
+      tags: frontend
+      when: COMPONENT == "frontend"
+
+    - role: users
+      tags: users
+      when: COMPONENT == "users"
+
+    - role: login
+      tags: login
+      when: COMPONENT == "login"
+
+    - role: redis
+      tags: redis
+      when: COMPONENT == "redis"
+
+    - role: todo
+      tags: todo
+      when: COMPONENT == "todo"
