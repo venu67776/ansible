@@ -31,15 +31,14 @@
     owner: ubuntu
     group: ubuntu
 
-- name: Copy systemd Service file
+- name: Copy {{COMPONENT}} Service file
   template:
-    src: login.service
-    dest: /etc/systemd/system/login.service
+    src: {{COMPONENT}}.service
+    dest: /etc/systemd/system/{{COMPONENT}}.service
 
-- name: Start login Service
+- name: Start {{COMPONENT}} Service
   systemd:
-    name: login.service
+    name: {{COMPONENT}}.service
     daemon_reload: yes
     state: started
     enabled: yes
-
