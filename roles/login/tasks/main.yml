@@ -10,6 +10,18 @@
     dest: /tmp/{{COMPONENT}}.zip
     username: admin
     password: admin
+
+- name: Clean the old artifacts
+  file:
+    path: /home/ubuntu/{{COMPONENT}}
+    state: absent
+
+- name: Create the artifact path
+  file:
+    path: /home/ubuntu/{{COMPONENT}}
+    state: directory
+    owner: ubuntu
+    group: ubuntu
   
 - name: Extract the {{COMPONENT}} Content
   unarchive:
