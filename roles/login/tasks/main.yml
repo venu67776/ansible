@@ -32,7 +32,7 @@
     group: ubuntu
 
 - name: Copy {{COMPONENT}} Service file
-  templates:
+  template:
     src: "{{COMPONENT}}.service"
     dest: /etc/systemd/system/{{COMPONENT}}.service
 
