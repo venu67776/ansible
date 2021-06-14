@@ -25,7 +25,7 @@
   
 - name: Extract the {{COMPONENT}} Content
   unarchive:
-    src: /tmp/{{COMPONENT}}.zip
+    src: "/tmp/{{COMPONENT}}.zip"
     dest: /home/ubuntu/{{COMPONENT}}
     remote_src: yes
     owner: ubuntu
