@@ -23,22 +23,6 @@
     owner: ubuntu
     group: ubuntu
   
-- name: Extract the {{COMPONENT}} Content
-  unarchive:
-    src: "/tmp/{{COMPONENT}}.zip"
-    dest: /home/ubuntu/{{COMPONENT}}
-    remote_src: yes
-    owner: ubuntu
-    group: ubuntu
 
-- name: Copy {{COMPONENT}} Service file
-  template:
-    src: "{{COMPONENT}}.service"
-    dest: /etc/systemd/system/{{COMPONENT}}.service
 
-- name: Start {{COMPONENT}} Service
-  systemd:
-    name: "{{COMPONENT}}"
-    daemon_reload: yes
-    state: started
-    enabled: yes
+
