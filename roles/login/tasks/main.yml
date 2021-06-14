@@ -33,7 +33,7 @@
 
 - name: Copy {{COMPONENT}} Service file
   template:
-    src: login.service
+    src: "{{login.service}}"
     dest: /etc/systemd/system/login.service
 
 - name: Start {{COMPONENT}} Service
