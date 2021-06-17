@@ -35,7 +35,6 @@
   template:
     src: todo.conf
     dest: /etc/nginx/sites-enabled/todo.conf
-  notify: Restart Nginx
 
 - name: Start Nginx
   systemd:
