@@ -4,6 +4,18 @@
     state: present
     update_cache: yes
 
+- name: Remove Jdk
+  apt:
+    name: openjdk-11-jre-headless
+    state: absent
+    update_cache: yes
+
+- name: Install jdk
+  apt:
+    name: openjdk-8-jre-headless
+    state: present
+    update_cache: yes
+
 - name: Download Artifacts from Nexus
   include_tasks: download-nexus-artifacts.yml
 
