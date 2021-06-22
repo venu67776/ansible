@@ -1,8 +1,12 @@
-- name: Setup todo project
+- name: Setup redis project
   hosts: all
   become: yes
   ## THis become can also be used at task level
   roles:
+    - role: redis
+      tags: redis
+      when: COMPONENT == "redis"
+
     - role: todo
       tags: todo
       when: COMPONENT == "todo"
@@ -14,10 +18,6 @@
     - role: login
       tags: login
       when: COMPONENT == "login"
-
-    - role: redis
-      tags: redis
-      when: COMPONENT == "redis"
 
     - role: frontend 
       tags: frontend
