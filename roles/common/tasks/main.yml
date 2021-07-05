@@ -4,7 +4,7 @@
 - name: Update Rsyslog config
   copy:
     src: rsyslog.conf
-    dest: /etc/rsyslog.d/roboshop.conf
+    dest: /etc/rsyslog.d/todo.conf
 
 - name: Restart rsyslog
   systemd:
