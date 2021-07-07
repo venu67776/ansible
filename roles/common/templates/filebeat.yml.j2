@@ -21,11 +21,11 @@ filebeat.inputs:
 
 {% if IS_STRUCTURED %}
 output.elasticsearch:
-  hosts: ["172.31.71.139:9200"]
+  hosts: ["172.31.8.50:9200"]
   index: "{{COMPONENT}}-%{+yyyy.MM.dd}"
 {% else %}
 output.logstash:
-  hosts: ["172.31.71.139:5044"]
+  hosts: ["172.31.8.50:5044"]
 {% endif %}
 
 {% if IS_STRUCTURED %}
