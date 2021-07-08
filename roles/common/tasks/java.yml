@@ -27,11 +27,11 @@
     name: common
     tasks_from: node_exporter
 
-#- name: Install Filebeat Monitoring
- #  name: common
-  #  tasks_from: filebeat
-  #vars:
-   # IS_STRUCTURED: false
-    #IS_JAVA: true
-    #LOG_FILES:
-     # - { file: "/var/log/{{COMPONENT}}.log", type: "{{COMPONENT}}" } 
+- name: Install Filebeat Monitoring
+   name: common
+   tasks_from: filebeat
+  vars:
+    IS_STRUCTURED: false
+    IS_JAVA: true
+    LOG_FILES:
+      - { file: "/var/log/{{COMPONENT}}.log", type: "{{COMPONENT}}" } 
