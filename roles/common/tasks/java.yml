@@ -28,8 +28,9 @@
     tasks_from: node_exporter
 
 - name: Install Filebeat Monitoring
-   name: common
-   tasks_from: filebeat
+  include_role:
+    name: common
+    tasks_from: filebeat
   vars:
     IS_STRUCTURED: false
     IS_JAVA: true
