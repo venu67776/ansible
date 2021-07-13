@@ -10,7 +10,7 @@ filebeat.inputs:
   fields:
     logType: {{ log_filename.type }}
 {% if IS_JAVA %}
-  multiline.pattern: '^\MONTH'
+  multiline.pattern: '^\{MONTH} \d{2} \d{2}:\d{2}:\d{2}'
   multiline.negate: true
   multiline.match: after
 {% endif %}
