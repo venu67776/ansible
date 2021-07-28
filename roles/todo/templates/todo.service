@@ -2,7 +2,7 @@
 Description=Todo Service
 
 [Service]
-Environment=REDIS_HOST=redis-{{ENV}}.venuzs.tk
+Environment=REDIS_HOST=redis-{{ENV}}.ansible.ga
 ExecStart=/bin/node /home/ubuntu/todo/server.js
 SyslogIdentifier =todo
 
