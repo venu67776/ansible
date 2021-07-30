@@ -22,7 +22,7 @@ output.elasticsearch:
   index: "{{COMPONENT}}-%{+yyyy.MM.dd}"
 {% else %}
 output.logstash:
-  osts: ["172.31.7.113:5044"]
+  hosts: ["172.31.7.113:5044"]
 {% endif %}
 
 {% if IS_STRUCTURED %}
